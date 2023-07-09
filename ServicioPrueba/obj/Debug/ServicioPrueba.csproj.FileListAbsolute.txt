@@ -1,0 +1,7 @@
+C:\Users\pc\source\repos\ServicioPrueba\ServicioPrueba\bin\Debug\ServicioPrueba.exe.config
+C:\Users\pc\source\repos\ServicioPrueba\ServicioPrueba\bin\Debug\ServicioPrueba.exe
+C:\Users\pc\source\repos\ServicioPrueba\ServicioPrueba\bin\Debug\ServicioPrueba.pdb
+C:\Users\pc\source\repos\ServicioPrueba\ServicioPrueba\obj\Debug\ServicioPrueba.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\ServicioPrueba\ServicioPrueba\obj\Debug\ServicioPrueba.exe
+C:\Users\pc\source\repos\ServicioPrueba\ServicioPrueba\obj\Debug\ServicioPrueba.pdb
+C:\Users\pc\source\repos\ServicioPrueba\ServicioPrueba\obj\Debug\ServicioPrueba.csprojAssemblyReference.cache
