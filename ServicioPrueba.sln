@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.33403.129
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioPrueba", "ServicioPrueba\ServicioPrueba.csproj", "{5443306B-972C-4464-B417-CC870CCB955C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{734CEC74-E6BB-4624-BBEA-7F5DCEAAEA8E}"
 	ProjectSection(SolutionItems) = preProject
 		TextFile1.txt = TextFile1.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{F0CCF41F-3C06-4B4D-BE76-2D2170EF7444}"
+	ProjectSection(SolutionItems) = preProject
+		Dat.cs = Dat.cs
 	EndProjectSection
 EndProject
 Global

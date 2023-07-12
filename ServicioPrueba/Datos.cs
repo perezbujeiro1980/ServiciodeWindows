@@ -6,18 +6,9 @@ using System.Data.SqlClient;
 
 namespace ServicioPrueba
 {
-    class Datos
+   public class Datos
     {
-        public class Program
-        {
-            public static void Main()
-            {
-                string connectionString = "Data Source=NombreInstancia;Initial Catalog=NombreBaseDatos;Integrated Security=True";
-                
-                DataTable dataTable = GetDataTableFromMSSQL(connectionString, "SELECT * FROM prueba");
-                string json = ConvertDataTableToJson(dataTable);
-                Console.WriteLine(json);
-            }
+           
 
             public static DataTable GetDataTableFromMSSQL(string connectionString, string query)
             {
@@ -35,8 +26,6 @@ namespace ServicioPrueba
                             return dataTable;
                         }
                     }
-
-
                 }
             }
 
@@ -54,7 +43,28 @@ namespace ServicioPrueba
                 }
                 return JsonConvert.SerializeObject(rows);
             }
-        }
 
+            public Newtonsoft.Json getJSON(string connectionString)
+            {
+
+                string connectionString = "Data Source=RYAP021BUE;Initial Catalog=Ax2k9ArgRayPro;Integrated Security=True";
+
+                DataTable dataTable = GetDataTableFromMSSQL(connectionString, "select s.INVENTSUBBATCHID," +
+                    "s.ITEMID, i.ITEMNAME, s.PDSDISPOSITIONCODE, " +
+                    "s.INVENTBATCHID,l.PRODDATE,l.EXPDATE," +
+                    "im.unitid" +
+                    "from InventSubBatch_MPH s" +
+                    "inner join INVENTTABLE i on i.ITEMID=s.ITEMID" +
+                    "inner join INVENTBATCH l on s.ITEMID=l.ITEMID " +
+                    "and s.INVENTBATCHID=l.INVENTBATCHID" +
+                    "inner join INVENTTABLEMODULE im on im.ITEMID=i.ITEMID" +
+                    "where s.DATAAREAID='070' and l.DATAAREAID='070' and i.DATAAREAID='070'" +
+                    "and im.DATAAREAID='070' and im.MODULETYPE=0" +
+                    "order by s.INVENTSUBBATCHID");
+                string json = ConvertDataTableToJson(dataTable);
+                return(json);
+
+            }
     }
+    
 }
