@@ -11,7 +11,6 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading;
-using System.Text;
 using Newtonsoft.Json;
 using System.Windows.Forms;
 using System.Web;
@@ -20,15 +19,10 @@ namespace ServicioPrueba
 {
     public partial class Service1 : ServiceBase
     {
-
-      
-
-        public Service1()
+      public Service1()
         {
             InitializeComponent();
         }
-
-        
 
         private HttpListener listener;
         private CancellationTokenSource cts;
@@ -36,7 +30,6 @@ namespace ServicioPrueba
         protected override void OnStart(string[] args)
         {
             
-
             // Establece la dirección IP y el puerto en los que el servidor escuchará las solicitudes
             string ipAddress = "127.0.0.1";
             int port = 8080;
