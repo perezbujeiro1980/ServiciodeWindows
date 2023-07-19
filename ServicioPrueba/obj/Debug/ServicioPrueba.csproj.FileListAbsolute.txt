@@ -5,3 +5,14 @@ C:\Users\pc\source\repos\ServicioPrueba\ServicioPrueba\obj\Debug\ServicioPrueba.
 C:\Users\pc\source\repos\ServicioPrueba\ServicioPrueba\obj\Debug\ServicioPrueba.exe
 C:\Users\pc\source\repos\ServicioPrueba\ServicioPrueba\obj\Debug\ServicioPrueba.pdb
 C:\Users\pc\source\repos\ServicioPrueba\ServicioPrueba\obj\Debug\ServicioPrueba.csprojAssemblyReference.cache
+C:\Desarollo\ServiciodeWindows\ServicioPrueba\bin\Debug\ServicioPrueba.exe.config
+C:\Desarollo\ServiciodeWindows\ServicioPrueba\bin\Debug\ServicioPrueba.exe
+C:\Desarollo\ServiciodeWindows\ServicioPrueba\bin\Debug\ServicioPrueba.pdb
+C:\Desarollo\ServiciodeWindows\ServicioPrueba\bin\Debug\Newtonsoft.Json.dll
+C:\Desarollo\ServiciodeWindows\ServicioPrueba\bin\Debug\Newtonsoft.Json.xml
+C:\Desarollo\ServiciodeWindows\ServicioPrueba\obj\Debug\ServicioPrueba.csproj.AssemblyReference.cache
+C:\Desarollo\ServiciodeWindows\ServicioPrueba\obj\Debug\ServicioPrueba.csproj.SuggestedBindingRedirects.cache
+C:\Desarollo\ServiciodeWindows\ServicioPrueba\obj\Debug\ServicioPrueba.csproj.CoreCompileInputs.cache
+C:\Desarollo\ServiciodeWindows\ServicioPrueba\obj\Debug\ServicioPrueba.csproj.CopyComplete
+C:\Desarollo\ServiciodeWindows\ServicioPrueba\obj\Debug\ServicioPrueba.exe
+C:\Desarollo\ServiciodeWindows\ServicioPrueba\obj\Debug\ServicioPrueba.pdb

@@ -13,14 +13,15 @@ using System.Text;
 using System.Threading;
 using System.Text;
 using Newtonsoft.Json;
+using System.Windows.Forms;
+using System.Web;
 
 namespace ServicioPrueba
 {
     public partial class Service1 : ServiceBase
     {
 
-        // Establece conexion con bb.dd.    
-        Dat datos = new Dat();
+      
 
         public Service1()
         {
@@ -34,7 +35,7 @@ namespace ServicioPrueba
 
         protected override void OnStart(string[] args)
         {
-                           
+            
 
             // Establece la dirección IP y el puerto en los que el servidor escuchará las solicitudes
             string ipAddress = "127.0.0.1";
@@ -56,7 +57,7 @@ namespace ServicioPrueba
 
         protected override void OnStop()
         {
-
+          
             // Detiene el manejo de solicitudes y cancela la operación asincrónica
             cts.Cancel();
             listener.Stop();
@@ -73,14 +74,22 @@ namespace ServicioPrueba
                 HttpListenerContext context = await listener.GetContextAsync();
 
                 // Verifica el método de la solicitud
-                if (context.Request.HttpMethod == "POST")
-                //  if (context.Request.HttpMethod == "GET")
+                //if (context.Request.HttpMethod == "POST")
+                if (context.Request.HttpMethod == "GET")
+                    
                 {
+
+
+                    // Establece conexion con bb.dd.    
+                      var datos = new Dat();
+                   
+                    //  datos.getJSON(); 
                     // Establece el tipo de contenido de la respuesta como XML
                     context.Response.ContentType = "application/xml";
 
                     // Construye el XML de ejemplo
-                    string xmlResponse = "<root><message>Hola mundo</message></root>";
+                   string xmlResponse = "<root><message>Hola mundo</message></root>";
+                    xmlResponse =  "asdasd";
 
                     // Convierte el XML en bytes
                     byte[] buffer = Encoding.UTF8.GetBytes(xmlResponse);
@@ -89,19 +98,20 @@ namespace ServicioPrueba
                     Stream output = context.Response.OutputStream;
 
                     // Escribe los bytes en el flujo de salida
-                    await output.WriteAsync(buffer, 0, buffer.Length, cancellationToken);
+                   await output.WriteAsync(buffer, 0, buffer.Length, cancellationToken);
 
                     // Escribe los bytes del JSON en el flujo de salida
-                    
+
                     // Establecer el encabezado Content-Type
-                    context.Response.ContentType= "text/JSON";
-                    //get a JSON from the getJSON method and send it to the web browser                   
-                    
+                    //  context.Response.ContentType= "text/JSON";
+                    //get a JSON from the getJSON method and send it to the web browser 
 
-                    // Serializar el objeto JSON y enviarlo al navegador                    
-                    return Json(datos.getJSON(), JsonRequestBehavior.AllowGet);
+                    // Serializar el objeto JSON y enviarlo al navegador
+                    // 
+                    //     byte[] buffer = Encoding.UTF8.GetBytes(datos.getJSON());
+                    //     await output.WriteAsync(buffer, 0, buffer.Length, cancellationToken);
 
- 
+                    //  await output.WriteAsync(datos.getJSON(), 0, buffer.Length, cancellationToken);
 
                     // Cierra el flujo de salida
                     output.Close();
